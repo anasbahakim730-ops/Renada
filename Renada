@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Renada ❤️</title>
+<style>
+body{
+margin:0;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#ff4e8b,#ff9ecf);
+font-family:Arial;
+overflow:hidden;
+color:white;
+text-align:center;
+}
+h1{font-size:30px;}
+button{
+padding:14px 30px;
+font-size:20px;
+border:none;
+border-radius:10px;
+cursor:pointer;
+position:absolute;
+transition:0.1s;
+}
+#yes{
+background:#00ff88;
+color:black;
+left:40%;
+}
+#no{
+background:#ff3333;
+color:white;
+left:55%;
+}
+#result{
+display:none;
+margin-top:20px;
+animation: fade 1s ease-in-out;
+}
+img{
+width:260px;
+border-radius:20px;
+margin-top:15px;
+}
+@keyframes fade{
+from{opacity:0; transform:scale(0.8);}
+to{opacity:1; transform:scale(1);}
+}
+</style>
+</head>
+<body>
+
+<div>
+<h1>Renada, will you be my Valentine? ❤️</h1>
+<button id="yes">Yes 😍</button>
+<button id="no">No 😏</button>
+
+<div id="result">
+<h2>I knew you would say YES, Renada! 💖</h2>
+<p>You are my heart, my happiness, and my forever love.  
+I’m the luckiest person to have you ❤️</p>
+<img src="https://i.imgur.com/8Km9tLL.png">
+</div>
+</div>
+
+<script>
+const noBtn = document.getElementById("no");
+const yesBtn = document.getElementById("yes");
+const result = document.getElementById("result");
+
+// زر No يهرب بسرعة مجنونة
+noBtn.addEventListener("mouseover",()=>{
+let x=Math.random()*(window.innerWidth-100);
+let y=Math.random()*(window.innerHeight-50);
+noBtn.style.left=x+"px";
+noBtn.style.top=y+"px";
+});
+
+// لما تضغط Yes
+yesBtn.addEventListener("click",()=>{
+yesBtn.style.display="none";
+noBtn.style.display="none";
+result.style.display="block";
+});
+</script>
+
+</body>
+</html>
